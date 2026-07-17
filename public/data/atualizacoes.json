@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "produto": "Pizza Pizza",
+    "titulo": "Atualizações do sistema"
+  },
+  "atualizacoes": [
+    {
+      "tema": "Contraste no tema escuro — Criar Relatórios",
+      "descricao": "Ajuste de contraste dos cards e títulos na página Criar Relatórios no modo escuro, garantindo leitura confortável de títulos, descrições e categorias.",
+      "data": "2026-07-17"
+    },
+    {
+      "tema": "Ponto eletrônico e solicitações de ajuste",
+      "descricao": "Dashboard de ponto, cartão do colaborador, justificativas e inbox de solicitações de ajuste para RH e gestores, com fluxo de aprovação integrado.",
+      "data": "2026-07-08"
+    },
+    {
+      "tema": "Gestão de diaristas",
+      "descricao": "Módulo completo de diaristas: escala, pedidos, avaliação por loja/diarista e blocklist para controle operacional da rede.",
+      "data": "2026-06-25"
+    },
+    {
+      "tema": "Recepção do escritório",
+      "descricao": "Dashboard da recepção com controle de entradas, agenda de salas e ramais, centralizando o atendimento do escritório.",
+      "data": "2026-06-12"
+    },
+    {
+      "tema": "Inspeção nutricional e planos de ação",
+      "descricao": "Módulo Nutri com inspeções, questionários, relatório de lojas e planos de ação para acompanhamento de qualidade.",
+      "data": "2026-05-30"
+    },
+    {
+      "tema": "Integração Saipos Data API",
+      "descricao": "Camada de serviços e sincronização com a Saipos para resumo de vendas, alimentando o termômetro e indicadores de loja.",
+      "data": "2026-05-18"
+    },
+    {
+      "tema": "Slicebot — configuração da IA",
+      "descricao": "Painel de configuração do assistente com suporte a provedores (Ollama, Google, Anthropic, OpenAI), escolha de modelo e prompt personalizado.",
+      "data": "2026-05-05"
+    },
+    {
+      "tema": "Criar Relatórios TI",
+      "descricao": "Central de geração de documentos técnicos: solicitação de compra e orçamento, relatórios semanal/mensal, visita técnica, termo de responsabilidade, incidente e manutenção preventiva.",
+      "data": "2026-04-22"
+    },
+    {
+      "tema": "Solicitações de vagas e processos seletivos",
+      "descricao": "Fluxo de pedidos de vaga entre loja e RH, com acompanhamento e processos seletivos para gestores e equipe de RH.",
+      "data": "2026-04-10"
+    },
+    {
+      "tema": "Espaços de trabalho (Kanban)",
+      "descricao": "Quadros colaborativos estilo Kanban para organizar demandas por espaço de trabalho, com cards, colunas e acompanhamento em equipe.",
+      "data": "2026-03-28"
+    },
+    {
+      "tema": "Tema claro e escuro corporativo",
+      "descricao": "Alternância light/dark em todo o admin com tokens de marca Pizza Pizza (laranja #e8430a), tipografia Barlow/Aldo e persistência da preferência do usuário.",
+      "data": "2026-03-12"
+    }
+  ]
+}

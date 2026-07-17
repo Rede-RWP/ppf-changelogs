@@ -1,59 +1,55 @@
-# PpfChangelogs
+# PPF Changelogs — Atualizações Rede RWP
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+Site estático de changelog do **Rede RWP / Pizza Pizza**, com o mesmo visual (tokens, tipografia e tema claro/escuro) do RederWP.
 
-## Development server
+## Como funciona
 
-To start a local development server, run:
+Todas as atualizações ficam em:
 
-```bash
-ng serve
+```
+public/data/atualizacoes.json
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+| Campo       | Descrição               |
+|-------------|-------------------------|
+| `tema`      | Título da atualização   |
+| `descricao` | O que foi feito         |
+| `data`      | Data ISO (`YYYY-MM-DD`) |
 
-## Code scaffolding
+O site ordena pelas datas mais recentes primeiro.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Desenvolvimento
 
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+Abra `http://localhost:4200/`.
 
-To build the project run:
+## Build (Hostinger)
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Saída pronta para hospedagem estática:
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```
+dist/ppf-changelogs/
+  index.html
+  .htaccess
+  data/atualizacoes.json
+  *.js / *.css
 ```
 
-## Running end-to-end tests
+### Configuração na Hostinger (Deployments)
 
-For end-to-end (e2e) testing, run:
+1. **Comando de build:** `npm run build`
+2. **Diretório de saída (Output directory):** `dist/ppf-changelogs`
+3. **NÃO** use Node/SSR — o site é 100% estático (HTML/CSS/JS)
 
-```bash
-ng e2e
-```
+Se o domínio continuar em **403 Forbidden**, quase sempre é porque o deploy estava apontando para a pasta do repositório ou para `dist/ppf-changelogs` com subpasta `browser`/`server` (build SSR antigo). Após este ajuste, o `index.html` fica **na raiz** de `dist/ppf-changelogs`.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Tema
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+O botão sol/lua usa a chave `localStorage` `rwp-theme` (igual ao RederWP).

@@ -1,0 +1,22 @@
+# Hostinger / Apache — site estático Angular
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Arquivos e pastas reais (js, css, data, favicon)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA: demais rotas → index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Cache leve de assets com hash
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|ico|json)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>

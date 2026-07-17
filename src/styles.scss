@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+/* Rede RWP / Pizza Pizza — tokens alinhados ao RederWP */
+@font-face {
+  font-family: "Aldo the Apache";
+  src: local("Aldo the Apache"), local("AldotheApache");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --pp-or: #e8430a;
+  --pp-or2: #ff5c20;
+  --pp-or3: #c43208;
+  --pp-org: rgba(232, 67, 10, 0.14);
+  --pp-bk: #080808;
+  --pp-wh: #fff;
+  --pp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --font-title: "Aldo the Apache", "Bebas Neue", sans-serif;
+  --font-cond: "Barlow Condensed", "Inter", sans-serif;
+  --font-body: "Barlow", "Inter", "Roboto", sans-serif;
+
+  --corp-accent: var(--pp-or);
+  --corp-accent-hover: var(--pp-or3);
+  --corp-accent-soft: var(--pp-org);
+  --corp-focus-ring: rgba(232, 67, 10, 0.22);
+  --corp-bg-page: #eef1f5;
+  --corp-panel: #ffffff;
+  --corp-border: #dde1e8;
+  --corp-text: #333333;
+  --corp-text-muted: #6b7280;
+  --corp-topbar-bg: linear-gradient(180deg, #eef0f4 0%, #e4e7ec 100%);
+  --corp-topbar-fg: #1a1d23;
+  --corp-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+}
+
+html[data-theme="dark"] {
+  --corp-accent: var(--pp-or2);
+  --corp-accent-hover: #ff7a45;
+  --corp-accent-soft: rgba(232, 67, 10, 0.18);
+  --corp-focus-ring: rgba(255, 92, 32, 0.35);
+  --corp-bg-page: #0e0f12;
+  --corp-panel: #16171c;
+  --corp-border: #2a2d35;
+  --corp-text: #e8e9ed;
+  --corp-text-muted: #9ca3af;
+  --corp-topbar-bg: linear-gradient(180deg, #1c1d21 0%, #121316 100%);
+  --corp-topbar-fg: #f3f4f6;
+  --corp-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background: var(--corp-bg-page);
+  color: var(--corp-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+}
