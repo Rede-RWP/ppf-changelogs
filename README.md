@@ -32,23 +32,27 @@ Abra `http://localhost:4200/`.
 npm run build
 ```
 
-Saída pronta para hospedagem estática:
+Saída pronta para hospedagem estática (Apache):
 
 ```
-dist/ppf-changelogs/
+dist/
   index.html
   .htaccess
   data/atualizacoes.json
   *.js / *.css
 ```
 
-### Configuração na Hostinger (Deployments)
+### Configuração na Hostinger (Deployments / Git)
+
+Use deploy **estático** (não Node.js / não SSR):
 
 1. **Comando de build:** `npm run build`
-2. **Diretório de saída (Output directory):** `dist/ppf-changelogs`
-3. **NÃO** use Node/SSR — o site é 100% estático (HTML/CSS/JS)
+2. **Diretório de saída (Output directory):** `dist`
+3. **NÃO** use Node.js app nem comando `start` em produção
 
-Se o domínio continuar em **403 Forbidden**, quase sempre é porque o deploy estava apontando para a pasta do repositório ou para `dist/ppf-changelogs` com subpasta `browser`/`server` (build SSR antigo). Após este ajuste, o `index.html` fica **na raiz** de `dist/ppf-changelogs`.
+Se aparecer **403 Forbidden** (“Access to this resource on the server is denied!”), em geral o `index.html` não está na raiz do site publicado — confira se o output é exatamente `dist` (sem `/browser` e sem `dist/ppf-changelogs`).
+
+O `.htaccess` já define `DirectoryIndex index.html` (necessário na Hostinger, onde o padrão costuma ser só `index.php`).
 
 ## Tema
 
